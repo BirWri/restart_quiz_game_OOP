@@ -5,10 +5,8 @@ class Quizbrain:
         self.questions_list = questions_list
 
     def still_has_questions(self):
-        if self.question_number == len(self.questions_list):
-            return False
-        else:
-            return True
+        return self.question_number < len(self.questions_list)
+
 
     def new_questions(self):
         current_question = self.questions_list[self.question_number].text
