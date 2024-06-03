@@ -6,7 +6,7 @@ class Quizbrain:
 
     def new_questions(self):
         current_question = self.questions_list[self.question_number].text
-        user_answer = input(f"Q.{self.question_number + 1}: {current_question} (True/False)?: ")
-        return user_answer
+        self.question_number += 1
+        input(f"Q.{self.question_number}: {current_question} (True/False)?: ")
 
 
