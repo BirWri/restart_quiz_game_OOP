@@ -4,6 +4,12 @@ class Quizbrain:
         self.question_number = 0
         self.questions_list = questions_list
 
+    def still_has_questions(self):
+        if self.question_number == len(self.questions_list):
+            return False
+        else:
+            return True
+
     def new_questions(self):
         current_question = self.questions_list[self.question_number].text
         self.question_number += 1

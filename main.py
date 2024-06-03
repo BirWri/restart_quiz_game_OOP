@@ -10,6 +10,8 @@ for question in question_data:
     question_bank.append(new_question)
 
 quiz_brain = Quizbrain(question_bank)
-user_guess = quiz_brain.new_questions()
-print(user_guess)
+
+while quiz_brain.still_has_questions():
+    quiz_brain.new_questions()
+
 
